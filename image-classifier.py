@@ -12,7 +12,7 @@ def load_model():
 st.set_page_config(page_title="Time of the Day Classification", page_icon="🌞")
 st.title("Time of the Day Classification")
 st.markdown("---")
-st.write("This website classifies the time of day based on your uploaded image.")
+st.write("Using the image you've uploaded, this website classifies what time of day it is. The prediction will be either Day Time, Night Time, or Sunrise.")
 
 # File uploader
 file = st.file_uploader("Upload an image", type=["jpg", "png", "jpeg"])
@@ -33,7 +33,7 @@ def import_and_predict(image_data, model):
 
 # Load the pre-trained model
 model = load_model()
-class_names = ['Day time', 'Night time', 'Sunrise']
+class_names = ['Day Time', 'Night Time', 'Sunrise']
 
 # Display prediction results
 if file is None:
